@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/carousel.css">
+
+    <!-- script -->
+    <script src="/js/carousel.js"></script>
+
+    <title><%= pageTitle %></title>
+
+</head>
+
+<body>
+    <!-- Aside Nav -->
+
+    <aside id="mySidebar" class="aside-nav-container">
+        <div class="menu-btn">
+            <i onclick="return closeNav()" class="fas fa-times"></i>
+        </div>
+        <div class="profile-container">
+            <img src="https://badawi1713.github.io/assets/images/profile-img.jpg" width="100%" alt="profil.jpg">
+            <h3>Dzaky Badawi</h3>
+        </div>
+        <nav class="aside-nav">
+            <ul>
+                <li><a href="#">Add Book</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Add Book*</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- main container -->
+    <div class="grid-container" id="main">
+        <!-- Top Nav -->
+        <div class="top-nav-container">
+            <nav class="top-nav">
+                <ul>
+                    <li id="openSidebar">
+                        <div class="topnav-btn">
+                            <i onclick="return openNav()" class="fas fa-bars"></i>
+                        </div>
+                    </li>
+                    <li>All Categories <i class="fa fa-caret-down"></i></li>
+                    <li>All Time <i class="fa fa-caret-down"></i></li>
+                    <li><input style="font-family:Arial, FontAwesome" type="text" placeholder="&#xf002; Search book" />
+                    </li>
+
+                </ul>
+
+                <a href="#"><img class=" logo" src="/images/logo.png" alt="logo.png"></a>
+            </nav>
+        </div>
+
+
+
+        <!-- Carousel Section -->
+
+        <section class="carousel-container">
+
+            <div class="card-carousel-wrapper js-flickity"
+                data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+                <div class="carousel-card">
+                    <div class="carousel-image-card">
+                        <img src="/images/carousel1.png" alt="carousel img">
+                    </div>
+                    <div class="carousel-text">
+                        <h2>Dilan 1990</h2>
+                        <p>Pidi Baiq</p>
+                    </div>
+
+                </div>
+
+                <div class="carousel-card">
+                    <div class="carousel-image-card">
+                        <img src="/images/carousel2.png" alt="carousel img">
+
+                    </div>
+                    <div class="carousel-text">
+                        <h2>Ubur-Ubur Lembur</h2>
+                        <p>Raditya Dika</p>
+
+                    </div>
+                </div>
+
+                <div class="carousel-card">
+                    <div class="carousel-image-card">
+                        <img src="/images/carousel3.png" alt="carousel img">
+
+                    </div>
+                    <div class="carousel-text">
+                        <h2>Laskar Pelangi</h2>
+                        <p>Andrea hirata</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Book Lists -->
+        <div class="content-title">
+            <h2>Book Lists</h2>
+        </div>
+
+        <!-- Content Section -->
+        <section class="content-container">
+
+            <div class="card-container">
+                <a href="/book-details">
+                    <img src="/images/buku1.png" alt="book-cover">
+                    <div class="card-text-container">
+                        <h3>Dilan 1990</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
+                            vehicula nisl consequat id.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="card-container">
+                <img src="/images/buku2.png" alt="book-cover">
+                <div class="card-text-container">
+                    <h3>Sebuah Seni untuk ...</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
+                        vehicula nisl consequat id.</p>
+                </div>
+
+            </div>
+            <div class="card-container">
+                <img src="/images/buku3.png" alt="book-cover">
+                <div class="card-text-container">
+                    <h3>React Native</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
+                        vehicula nisl consequat id.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <!-- script -->
+    <script>
+        function openNav() {
+            // document.getElementById("mySidenav").style.width = "100%";
+            if (window.matchMedia("(max-width: 700px)").matches) {
+                document.getElementById("mySidebar").style.width = "100%";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("openSidebar").style.display = "none";
+            } else {
+                document.getElementById("mySidebar").style.width = "300px";
+                document.getElementById("main").style.marginLeft = "300px";
+                document.getElementById("openSidebar").style.display = "none";
+            }
+
+            return false;
+
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("openSidebar").style.display = "flex";
+
+            return false;
+        }
+    </script>
+</body>
+
+</html>

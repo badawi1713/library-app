@@ -1,0 +1,209 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: #262626;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "cover-image cover-image "
+        "header-title borrow-button "
+        "book-content borrow-button ";
+}
+
+/* cover-image-container  */
+.cover-image-container {
+    /* background-color: #0092C7; */
+    grid-area: cover-image;
+    height: 470px;
+
+}
+
+.cover-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/* navbar */
+.navbar {
+    display: inline-block;
+}
+
+.navbar .back-button {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    /* background-color: black; */
+
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar .back-button a i {
+    color: white;
+    font-size: 30pt;
+    margin: 20px;
+}
+
+.navbar .menu-items {
+    font-size: 18pt;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* background-color: black; */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar .menu-items ul li {
+    margin: 20px;
+    display: inline-block;
+}
+
+.navbar .menu-items ul li a {
+    color: white;
+}
+
+/* end of navbar */
+
+/* end of cover-image-container */
+
+/* header-title-container */
+.header-title-container {
+    /* background-color: #03D0F8; */
+    grid-area: header-title;
+
+}
+
+.header-wrapper {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.label-text {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.genre-label .label-text p {
+    margin-right: 6px;
+    margin-bottom: 6px;
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    font-weight: bold;
+    background-color: #FBCC38;
+    border-radius: 15px;
+}
+
+.main-header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.main-header ul li h1 {
+    font-size: 36pt;
+    text-transform: uppercase;
+}
+
+.main-header ul li h3 {
+    font-size: 20pt;
+    color: #99D815;
+
+}
+
+.date-header p {
+    font-size: 12pt;
+    font-weight: bold;
+
+}
+
+/* end of header-title-container */
+
+
+/* book-content-container */
+.book-content-container {
+    /* background-color: #0A5C9A; */
+    grid-area: book-content;
+}
+
+.content-wrapper {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.content-wrapper main p {
+    font-size: 12pt;
+    line-height: 24px;
+}
+
+/* end of book-content-container */
+
+/* borrow-button-container */
+.borrow-button-container {
+    /* background-color: #85D1C4; */
+    grid-area: borrow-button;
+    width: 600px;
+}
+
+.aside-items {
+    display: block;
+}
+
+.aside-items .book-cover-img {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    left: 1120px;
+    top: 253px;
+
+}
+
+.book-cover-img img {
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.borrow-btn {
+    left: 1150px;
+    top: 725px;
+    position: absolute;
+
+}
+
+.borrow-btn button {
+    height: 50px;
+    width: 150px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    background-color: #FBCC38;
+    font-size: 18pt;
+    color: white;
+}
+
+/* end of borrow-button-container */

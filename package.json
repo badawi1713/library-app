@@ -1,0 +1,24 @@
+{
+  "name": "library-app",
+  "version": "0.0.1",
+  "description": "\"Library app is an app that can be used by the users to borrows book, and also for book management for admin\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "library",
+    "express",
+    "arkademy",
+    "app"
+  ],
+  "author": "dzaky.badawi@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.2",
+    "multer": "^1.4.2"
+  }
+}

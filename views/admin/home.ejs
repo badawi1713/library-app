@@ -12,12 +12,12 @@
     <link rel="manifest" href="/images/favicon/site.webmanifest">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/homepage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/carousel.css">
-
+    <link rel="stylesheet" href="/css/modal/add_modal.css">
     <!-- script -->
     <script src="/js/carousel.js"></script>
 
@@ -30,7 +30,7 @@
 
     <aside id="mySidebar" class="aside-nav-container">
         <div class="menu-btn">
-            <i onclick="return closeNav()" class="fas fa-times"></i>
+            <i onclick="return closeNav()" class="fas fa-bars"></i>
         </div>
         <div class="profile-container">
             <img src="https://badawi1713.github.io/assets/images/profile-img.jpg" width="100%" alt="profil.jpg">
@@ -38,9 +38,9 @@
         </div>
         <nav class="aside-nav">
             <ul>
-                <li><a href="#">Add Book</a></li>
+                <li><a href="#">Explore</a></li>
                 <li><a href="#">History</a></li>
-                <li><a href="#">Add Book*</a></li>
+                <li><a id="add" href="#">Add Book</a></li>
             </ul>
         </nav>
     </aside>
@@ -60,14 +60,10 @@
                     <li>All Time <i class="fa fa-caret-down"></i></li>
                     <li><input style="font-family:Arial, FontAwesome" type="text" placeholder="&#xf002; Search book" />
                     </li>
-
                 </ul>
-
                 <a href="#"><img class=" logo" src="/images/logo.png" alt="logo.png"></a>
             </nav>
         </div>
-
-
 
         <!-- Carousel Section -->
 
@@ -120,9 +116,8 @@
 
         <!-- Content Section -->
         <section class="content-container">
-
             <div class="card-container">
-                <a href="/book-details">
+                <a href="/admin/book-details">
                     <img src="/images/buku1.png" alt="book-cover">
                     <div class="card-text-container">
                         <h3>Dilan 1990</h3>
@@ -138,7 +133,6 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
                         vehicula nisl consequat id.</p>
                 </div>
-
             </div>
             <div class="card-container">
                 <img src="/images/buku3.png" alt="book-cover">
@@ -147,9 +141,49 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
                         vehicula nisl consequat id.</p>
                 </div>
-
             </div>
         </section>
+
+    </div>
+
+    <!-- Add  Modal -->
+    <div id="addModal" class="add-modal">
+
+        <!-- Add Modal content -->
+        <div class="add-modal-content">
+            <div class="add-modal-header">
+                <h1>Add Data</h1>
+                <span class="close">&times;</span>
+
+            </div>
+            <div class="add-modal-body">
+                <form action="" method="post">
+                    <div class="add-form-items">
+                        <label for="">URL Image</label>
+                        <div class="input-text">
+                            <input type="text" name="" id="" placeholder="URL Image ...">
+                        </div>
+                    </div>
+                    <div class="add-form-items">
+                        <label for="">Title</label>
+                        <div class="input-text">
+                            <input type="text" name="" id="" placeholder="Title ...">
+                        </div>
+                    </div>
+                    <div class="add-form-items">
+                        <label for="">Description</label>
+                        <div class="input-text">
+                            <textarea name="" id="" cols="30" rows="8" placeholder="Description ..."></textarea>
+                        </div>
+                    </div>
+                    <div class="add-modal-footer">
+
+                        <button>Save</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
 
     </div>
 
@@ -157,7 +191,7 @@
     <script>
         function openNav() {
             // document.getElementById("mySidenav").style.width = "100%";
-            if (window.matchMedia("(max-width: 700px)").matches) {
+            if (window.matchMedia("(max-width: 1200px)").matches) {
                 document.getElementById("mySidebar").style.width = "100%";
                 document.getElementById("main").style.marginLeft = "0";
                 document.getElementById("openSidebar").style.display = "none";
@@ -179,6 +213,7 @@
             return false;
         }
     </script>
+    <script src="/js/add_modal.js"></script>
 </body>
 
 </html>

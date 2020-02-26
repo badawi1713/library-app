@@ -15,10 +15,16 @@ app.use(Express.static(path.join(__dirname, 'public')));
 app.use(Express.static(path.join(__dirname, 'storages')));
 
 // Registered routes
-const userRoutes = require("./routes/admin_router");
+const adminRoutes = require("./routes/admin_router");
+const indexRoutes = require("./routes/index_routes");
 
 // Registered middlewares
-app.use("/", userRoutes);
+
+// admin routes
+app.use("/admin/", adminRoutes);
+
+// index routes
+app.use("/", indexRoutes);
 
 app.listen(PORT, () => {
     console.log("Listen to http://localhost:" + PORT);

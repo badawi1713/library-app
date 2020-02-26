@@ -21,9 +21,12 @@ ul {
 .grid-container {
     display: grid;
     grid-template-areas:
-        "cover-image cover-image "
-        "header-title borrow-button "
-        "book-content borrow-button ";
+        "cover-image cover-image ";
+}
+
+.grid-templates-content {
+    display: grid;
+    grid-template-columns: 75% 25%;
 }
 
 /* cover-image-container  */
@@ -42,11 +45,11 @@ ul {
 }
 
 /* navbar */
-.navbar {
+.top-navbar {
     display: inline-block;
 }
 
-.navbar .back-button {
+.top-navbar .back-button {
 
     position: absolute;
     top: 20px;
@@ -57,13 +60,13 @@ ul {
     padding-right: 20px;
 }
 
-.navbar .back-button a i {
+.top-navbar .back-button a i {
     color: white;
     font-size: 30pt;
     margin: 20px;
 }
 
-.navbar .menu-items {
+.top-navbar .menu-items {
     font-size: 18pt;
     position: absolute;
     top: 20px;
@@ -71,15 +74,30 @@ ul {
     /* background-color: black; */
     padding-left: 20px;
     padding-right: 20px;
+
 }
 
-.navbar .menu-items ul li {
+.top-navbar .menu-items ul li {
     margin: 20px;
     display: inline-block;
+    width: 100px;
+    text-align: center;
 }
 
-.navbar .menu-items ul li a {
+.top-navbar .menu-items ul li a {
     color: white;
+}
+
+.top-navbar .menu-items ul li:hover {
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+}
+
+.top-navbar .menu-items ul li a:hover {
+    text-decoration: none !important;
+
+    cursor: pointer;
 }
 
 /* end of navbar */
@@ -87,11 +105,6 @@ ul {
 /* end of cover-image-container */
 
 /* header-title-container */
-.header-title-container {
-    /* background-color: #03D0F8; */
-    grid-area: header-title;
-
-}
 
 .header-wrapper {
     padding: 20px;
@@ -143,10 +156,10 @@ ul {
 
 
 /* book-content-container */
-.book-content-container {
-    /* background-color: #0A5C9A; */
+/* .book-content-container {
+    background-color: #0A5C9A;
     grid-area: book-content;
-}
+} */
 
 .content-wrapper {
     padding: 20px;
@@ -161,24 +174,22 @@ ul {
 /* end of book-content-container */
 
 /* borrow-button-container */
-.borrow-button-container {
-    /* background-color: #85D1C4; */
-    grid-area: borrow-button;
-    width: 600px;
-}
+/* .borrow-button-container {
+    background-color: #85D1C4;
 
-.aside-items {
+} */
+
+/* .aside-items {
     display: block;
-}
+}*/
 
-.aside-items .book-cover-img {
+.book-cover-img {
     width: 200px;
     height: 300px;
-    position: absolute;
-    left: 1120px;
-    top: 253px;
+    margin: -170px auto;
 
 }
+
 
 .book-cover-img img {
     border-radius: 15px;
@@ -188,11 +199,9 @@ ul {
     object-fit: cover;
 }
 
-
 .borrow-btn {
-    left: 1150px;
-    top: 725px;
-    position: absolute;
+    margin-top: 300px;
+    text-align: center;
 
 }
 

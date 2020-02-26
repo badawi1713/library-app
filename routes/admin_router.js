@@ -2,7 +2,7 @@ const Express = require("express");
 const router = Express();
 
 router.get("/", (req, res, next) => {
-    res.render("admin/index", {
+    res.render("admin/home", {
         pageTitle: "Homepage"
     });
 });

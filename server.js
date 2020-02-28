@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({
 }));
 
 //static file for express view engine like css, js, jquery, ect
-app.use(Express.static(path.join(__dirname, 'public')));
-app.use(Express.static(path.join(__dirname, 'storages')));
+app.use(Express.static(path.join(__dirname, '/public')));
+app.use(Express.static(path.join(__dirname, '/storages')));
 
 // Registered routes
 const adminRouter = require("./routes/admin_router");

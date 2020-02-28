@@ -1,4 +1,4 @@
-/* The Modal (background) */
+/*Delete The Modal (background) */
 .delete-modal {
     display: none;
     /* Hidden by default */
@@ -22,70 +22,111 @@
     /* Black w/ opacity */
 }
 
-/* Modal Content */
+/*Delete Modal Content */
 .delete-modal-content {
+    border-radius: 20px 20px 20px 20px;
     position: relative;
-    background-color: #fefefe;
-    margin: -55px auto;
-    padding: 30px;
-    /* border: 1px solid #888; */
-    border-radius: 20px;
+    background-color: transparent;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
     width: 70%;
-    height: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* -webkit-animation-name: animatetop;
+    -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
-    animation-duration: 0.4s */
+    animation-duration: 0.4s;
 }
 
-.delete-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+/*Delete Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
-.delete-modal-header .close {
-    font-size: 40pt;
-    color: red;
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
 }
 
-.delete-modal-header .close:hover {
+/*Delete The Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
     cursor: pointer;
 }
 
+.delete-modal-header {
+    padding: 20px 30px;
+    background-color: #fff;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.delete-modal-header p {
+    font-size: 24pt;
+    font-weight: 600;
+    color: black;
+
+}
+
+.delete-modal-header span {
+    font-size: 26pt;
+    color: red;
+}
+
 .delete-modal-body {
-    margin: 80px auto;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 0px 0px 20px 20px;
+    height: 400px;
+}
+
+.delete-modal-body .body-wrapper {
     text-align: center;
+    margin: 40px auto;
 }
 
 .delete-modal-body img {
+    width: 200px;
+    height: 200px;
     margin-bottom: 20px;
 }
 
 .delete-modal-body h2 {
-    font-weight: lighter;
-    font-size: 26pt;
+    font-weight: 400;
 }
 
-.delete-modal-body h2 span {
-    font-weight: bold;
+.delete-modal-body h2>span {
+    font-weight: 800;
 }
 
-@media screen and (max-width: 400px) {
-    .delete-modal-body {
-        margin: 60px auto;
-        text-align: center;
-    }
-
-    .delete-modal-header .close {
-        font-size: 30pt;
-        color: red;
-    }
-
-    .delete-modal-body h2 {
-        font-weight: lighter;
-        font-size: 13pt;
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+    .delete-modal-body img {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
     }
 }

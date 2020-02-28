@@ -125,7 +125,7 @@
             <% if (book.length > 0) { %>
             <% for (var i = 0; i<book.length; i++) { %>
             <div class="card-container">
-                <a href="/admin/book-details">
+                <a href="/admin/book-details/<%= book[i]._id %>">
                     <img src="<%= book[i].imageURL %>" alt="book-cover">
                     <div class="card-text-container">
                         <h3><%= book[i].title %></h3>

@@ -131,13 +131,15 @@ label {
 .row button {
     margin-top: 20px;
     background-color: rgb(251, 204, 56);
-    color: black;
+    color: white;
     padding: 15px 30px 15px 30px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
     float: right;
     width: 140px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 .row button:hover {

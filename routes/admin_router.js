@@ -1,17 +1,13 @@
 const Express = require("express");
 const router = Express();
 
-router.get("/", (req, res, next) => {
-    res.render("admin/home", {
-        pageTitle: "Homepage"
-    });
-});
+const adminController = require('../controllers/admin_controller');
 
-router.get("/book-details", (req, res, next) => {
-    res.render("admin/book_details", {
-        pageTitle: "Detail"
-    });
-});
+router.get("/", adminController.getIndexPage);
+
+router.post("/add-book", adminController.postBookData);
+
+router.get("/book-details", adminController.getBooksDetail);
 
 
 module.exports = router;

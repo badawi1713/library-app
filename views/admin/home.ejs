@@ -122,17 +122,22 @@
 
         <!-- Content Section -->
         <section class="content-container">
+            <% if (book.length > 0) { %>
+            <% for (var i = 0; i<book.length; i++) { %>
             <div class="card-container">
                 <a href="/admin/book-details">
-                    <img src="/images/buku1.png" alt="book-cover">
+                    <img src="<%= book[i].imageURL %>" alt="book-cover">
                     <div class="card-text-container">
-                        <h3>Dilan 1990</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
-                            vehicula nisl consequat id.</p>
+                        <h3><%= book[i].title %></h3>
+                        <p><%= book[i].description.substr(0, 240)  %>...</p>
                     </div>
                 </a>
             </div>
-            <div class="card-container">
+            <%}%>
+            <% } else { %>
+            <h1>No Books Data Uploaded!</h1>
+            <% } %>
+            <!-- <div class="card-container">
                 <img src="/images/buku2.png" alt="book-cover">
                 <div class="card-text-container">
                     <h3>Sebuah Seni untuk ...</h3>
@@ -147,7 +152,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
                         vehicula nisl consequat id.</p>
                 </div>
-            </div>
+            </div> -->
         </section>
 
     </div>
@@ -163,7 +168,7 @@
             </div>
             <div class="add-modal-body">
                 <div class="form-wrapper">
-                    <form action="">
+                    <form action="/admin/add-book" method="POST">
                         <div class="row">
                             <div class="col-20">
                                 <label for="image-url">URL Image</label>

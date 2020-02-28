@@ -7,4 +7,10 @@ router.get("/", (req, res, next) => {
     });
 });
 
+router.get("/register", (req, res, next) => {
+    res.render("register", {
+        pageTitle: "Register"
+    })
+})
+
 module.exports = router;

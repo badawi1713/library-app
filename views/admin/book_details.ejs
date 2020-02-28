@@ -4,28 +4,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><%= pageTitle %></title>
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/images/favicon/site.webmanifest" />
+  <!-- <link rel="shortcut icon" href="/images/favicon-img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/images/favicon-img/favicon.ico" type="image/x-icon"> -->
+
+  <title>Details</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
     integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="/css/book_detail.css">
-  <link rel="stylesheet" href="/css/modal/edit_modal.css">
-  <link rel="stylesheet" href="/css/modal/delete_modal.css">
-
-
+  <link rel="stylesheet" href="/css/book_detail.css" />
+  <link rel="stylesheet" href="/css/modal/edit_modal.css" />
+  <link rel="stylesheet" href="/css/modal/delete_modal.css" />
 </head>
 
 <body>
   <div class="grid-container">
     <!-- header -->
     <section class="cover-image-container">
-      <img src="/images/cover1.jpg" alt="book-cover">
+      <img src="/images/cover1.jpg" alt="book-cover" />
       <nav class="top-navbar">
-        <div class="back-button"><a href="/admin/"><i class="fa fa-arrow-circle-left"></i></a></div>
+        <div class="back-button">
+          <a href="/admin"><i class="fa fa-arrow-circle-left"></i></a>
+        </div>
         <div class="menu-items">
           <ul>
-            <li><a id="edit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a></li>
-            <li><a id="delete" data-toggle="modal" data-target="#exampleModalCenter">Delete</a></li>
+            <li>
+              <a id="edit" data-toggle="modal" data-target="#exampleModalCenter">Edit</a>
+            </li>
+            <li>
+              <a id="delete" data-toggle="modal" data-target="#exampleModalCenter">Delete</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -57,18 +69,23 @@
         </div>
         <div class="content-wrapper">
           <main>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac diam eget est rutrum ultrices. Donec
-              laoreet enim a massa dapibus, cursus egestas dui pulvinar. Proin sit amet accumsan lectus. Nullam auctor
-              auctor consequat. Donec semper magna erat, sed fringilla lacus pretium eget. Cras porttitor, nibh sit amet
-              interdum bibendum, nibh velit accumsan tellus, vel vehicula tellus leo vitae ipsum. Praesent sit amet
-              libero
-              sed orci ullamcorper efficitur. Pellentesque in euismod purus, sit amet ultrices tortor. Vestibulum ante
-              dui, tempor at dui id, tincidunt euismod diam. Integer pellentesque massa nibh, ac eleifend odio malesuada
-              sed. Phasellus orci sem, cursus nec orci ut, accumsan facilisis lacus. Nullam at elementum nibh, ac
-              gravida
-              felis. In sagittis rhoncus nisi tempus dignissim. Sed fringilla consequat ante vitae lobortis. Cras
-              posuere
-              ligula vel enim suscipit malesuada. Vivamus non nulla ut ante imperdiet euismod quis nec massa.
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+              ac diam eget est rutrum ultrices. Donec laoreet enim a massa
+              dapibus, cursus egestas dui pulvinar. Proin sit amet accumsan
+              lectus. Nullam auctor auctor consequat. Donec semper magna erat,
+              sed fringilla lacus pretium eget. Cras porttitor, nibh sit amet
+              interdum bibendum, nibh velit accumsan tellus, vel vehicula
+              tellus leo vitae ipsum. Praesent sit amet libero sed orci
+              ullamcorper efficitur. Pellentesque in euismod purus, sit amet
+              ultrices tortor. Vestibulum ante dui, tempor at dui id,
+              tincidunt euismod diam. Integer pellentesque massa nibh, ac
+              eleifend odio malesuada sed. Phasellus orci sem, cursus nec orci
+              ut, accumsan facilisis lacus. Nullam at elementum nibh, ac
+              gravida felis. In sagittis rhoncus nisi tempus dignissim. Sed
+              fringilla consequat ante vitae lobortis. Cras posuere ligula vel
+              enim suscipit malesuada. Vivamus non nulla ut ante imperdiet
+              euismod quis nec massa.
             </p>
           </main>
         </div>
@@ -81,7 +98,7 @@
       <section class="borrow-button-container">
         <aside class="aside-items">
           <div class="book-cover-img">
-            <img src="/images/cover1.jpg" alt="book-cover.img">
+            <img src="/images/cover1.jpg" alt="book-cover.img" />
           </div>
           <div class="borrow-btn">
             <button>Borrow</button>
@@ -90,68 +107,70 @@
       </section>
     </div>
     <!-- content -->
-
   </div>
 
   <!-- Modal -->
-  <!-- Edit  Modal -->
-  <div id="editModal" class="edit-modal">
 
+  <!-- Edit Modal -->
+  <div id="editModal" class="edit-modal">
     <!-- Edit Modal content -->
     <div class="edit-modal-content">
       <div class="edit-modal-header">
-        <h1>Edit Data</h1>
         <span class="close">&times;</span>
-
+        <p>Edit Data</p>
       </div>
       <div class="edit-modal-body">
-        <form action="" method="post">
-          <div class="edit-form-items">
-            <label for="">URL Image</label>
-            <div class="input-text">
-              <input type="text" name="" id="" placeholder="URL Image ...">
+        <div class="form-wrapper">
+          <form action="">
+            <div class="row">
+              <div class="col-20">
+                <label for="image-url">URL Image</label>
+              </div>
+              <div class="col-80">
+                <input type="text" id="imageURL" name="imageURL" placeholder="URL Image.." />
+              </div>
             </div>
-          </div>
-          <div class="edit-form-items">
-            <label for="">Title</label>
-            <div class="input-text">
-              <input type="text" name="" id="" placeholder="Title ...">
+            <div class="row">
+              <div class="col-20">
+                <label for="book-title">Title</label>
+              </div>
+              <div class="col-80">
+                <input type="text" id="bookTitle" name="bookTitle" placeholder="Title.." />
+              </div>
             </div>
-          </div>
-          <div class="edit-form-items">
-            <label for="">Description</label>
-            <div class="input-text">
-              <textarea name="" id="" cols="30" rows="8" placeholder="Description ..."></textarea>
+            <div class="row">
+              <div class="col-20">
+                <label for="book-description">Description</label>
+              </div>
+              <div class="col-80">
+                <textarea id="description" name="description" placeholder="Description.."
+                  style="height:200px"></textarea>
+              </div>
             </div>
-          </div>
-          <div class="edit-modal-footer">
-
-            <button>Save</button>
-          </div>
-        </form>
+            <div class="row">
+              <button type="submit">Save</button>
+            </div>
+          </form>
+        </div>
       </div>
-
     </div>
-
   </div>
+  <!-- end of Add  Modal -->
 
   <!-- Delete  Modal -->
   <div id="deleteModal" class="delete-modal">
-
     <!-- DeleteModal content -->
     <div class="delete-modal-content">
       <div class="delete-modal-header">
-        <span> </span>
         <span class="close">&times;</span>
-
       </div>
       <div class="delete-modal-body">
-        <img src="/images/checked.png" alt="" srcset="">
-        <h2>Data <span>Dilan 1990</span> Berhasil Dihapus!</h2>
+        <div class="body-wrapper">
+          <img src="/images/checked.png" alt="" srcset="" />
+          <h2>Data <span>Dilan 1990</span> Berhasil Dihapus!</h2>
+        </div>
       </div>
-
     </div>
-
   </div>
   <!-- end of Modal -->
   <!-- script -->

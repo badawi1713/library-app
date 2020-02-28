@@ -10,6 +10,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <!-- favicon -->
+    <!-- <link rel="shortcut icon" href="/images/favicon-img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon-img/favicon.ico" type="image/x-icon"> -->
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/homepage.css">
@@ -18,10 +21,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="/css/carousel.css">
     <link rel="stylesheet" href="/css/modal/add_modal.css">
+
     <!-- script -->
+
     <script src="/js/carousel.js"></script>
 
-    <title><%= pageTitle %></title>
+    <title>Homepage</title>
 
 </head>
 
@@ -41,6 +46,7 @@
                 <li><a href="#">Explore</a></li>
                 <li><a href="#">History</a></li>
                 <li><a id="add" href="#">Add Book</a></li>
+                <li><a href="#">Logout</a></li>
             </ul>
         </nav>
     </aside>
@@ -117,7 +123,7 @@
         <!-- Content Section -->
         <section class="content-container">
             <div class="card-container">
-                <a href="/admin/book-details">
+                <a href="admin/book-details">
                     <img src="/images/buku1.png" alt="book-cover">
                     <div class="card-text-container">
                         <h3>Dilan 1990</h3>
@@ -152,42 +158,52 @@
         <!-- Add Modal content -->
         <div class="add-modal-content">
             <div class="add-modal-header">
-                <h1>Add Data</h1>
-                <span class="close">&times;</span>
-
+                <span class="add-close">&times;</span>
+                <p>Add Data</p>
             </div>
             <div class="add-modal-body">
-                <form action="" method="post">
-                    <div class="add-form-items">
-                        <label for="">URL Image</label>
-                        <div class="input-text">
-                            <input type="text" name="" id="" placeholder="URL Image ...">
+                <div class="form-wrapper">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-20">
+                                <label for="image-url">URL Image</label>
+                            </div>
+                            <div class="col-80">
+                                <input type="text" id="imageURL" name="imageURL" placeholder="URL Image..">
+                            </div>
                         </div>
-                    </div>
-                    <div class="add-form-items">
-                        <label for="">Title</label>
-                        <div class="input-text">
-                            <input type="text" name="" id="" placeholder="Title ...">
+                        <div class="row">
+                            <div class="col-20">
+                                <label for="book-title">Title</label>
+                            </div>
+                            <div class="col-80">
+                                <input type="text" id="bookTitle" name="bookTitle" placeholder="Title..">
+                            </div>
                         </div>
-                    </div>
-                    <div class="add-form-items">
-                        <label for="">Description</label>
-                        <div class="input-text">
-                            <textarea name="" id="" cols="30" rows="8" placeholder="Description ..."></textarea>
+                        <div class="row">
+                            <div class="col-20">
+                                <label for="book-description">Description</label>
+                            </div>
+                            <div class="col-80">
+                                <textarea id="description" name="description" placeholder="Description.."
+                                    style="height:200px"></textarea>
+                            </div>
                         </div>
-                    </div>
-                    <div class="add-modal-footer">
-
-                        <button>Save</button>
-                    </div>
-                </form>
+                        <div class="row">
+                            <button type="submit">Save</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
         </div>
 
     </div>
+    <!-- end of Add  Modal -->
 
     <!-- script -->
+
+    <script src="/js/add_modal.js"></script>
     <script>
         function openNav() {
             // document.getElementById("mySidenav").style.width = "100%";
@@ -213,7 +229,7 @@
             return false;
         }
     </script>
-    <script src="/js/add_modal.js"></script>
+
 </body>
 
 </html>
